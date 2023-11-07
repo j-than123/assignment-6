@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Encrypter / Decrypter</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="project.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <h1>Encrypter/Decrpyter</h1>
+
+        <div class="input">
+            <div class="textarea-input-container">
+                <label for="inputText">Input</label>
+                <div>
+                    <textarea id="inputText" name="textarea-input" rows="15" cols="100"></textarea>
+                </div>
+            </div>
+
+            <div class="file-input-container">
+                <label class="fileContainer" for="file-input">Select file</label>
+                <div>
+                    <input type="file" id="file-input">
+                </div>
+            </div>
+        </div>
+
+        <div class="encryption-decryption">
+            <label for="key">Encryption/Decryption Key</label>
+            <div>
+                <input type="text" id="key" name="passwordKey">
+            </div>
+        </div>
+
+        <div class="buttons">
+            <div id="encrypt-button">
+                <!-- <button onclick="onClickEncryption('inputText', 'key', 'outputText')">Encrypt</button> -->
+                <button>Encrypt</button>
+            </div>
+            <div id="decrypt-button">
+                <!-- <button onclick="onClickDecryption('inputText', 'key', 'outputText')">Decrypt</button> -->
+                <button>Decrypt</button>
+            </div>
+        </div>
+
+        <div class="output">        
+            <label for="outputText">Output</label>
+            <div class="textarea-output-container">
+                <textarea id="outputText" name="textarea-output" rows="15" cols="100"></textarea>
+            </div>
+        </div>
+
+    </body>
+
+
+
+</html>

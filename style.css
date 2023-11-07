@@ -1,0 +1,35 @@
+/* .text-and-file-input {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+} */
+
+/* .text-and-file-input {
+    border: 2px solid black
+} */
+
+.input {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.textarea-input-container{
+   margin-right: 25px;
+}
+
+.encryption-decryption {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.encrypt-button {
+    margin-right: 10px;
+}
