@@ -9,7 +9,12 @@
         <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous"> -->
     </head>
     <body>
-        <h1>Encrypter/Decrpyter</h1>
+        <h1 class="tooltip">Encrypter/Decrpyter
+            <span class="tooltiptext head">
+                This basic file encrypter will allow basic text encryption and ecryption via the use of the node module "crypto-js"<!----"<a href="https://cryptojs.gitbook.io/docs/">crypto-js</a>"---->. 
+                It uses AES-256 to encrypt and decrypt some message through the use of some key or password. File encryption will soon be implemented. The program is light, fast, and easy as it's basic but powerful.
+            </span>
+        </h1>
         
         <div class="input">
             <div class="textarea-input-container">
@@ -26,10 +31,16 @@
             </div>
 
             <div class="file-input-container">
-                <label class="fileContainer" for="file-input">Select file</label>
-                <div>
-                    <input type="file" id="file-input">
+                <div class="fileContainer tooltip" for="file-input"><a href="microservice.html" target="_blank" style="text-decoration: none;">File Encrypter</a>
+                    <span class="tooltiptext">
+                        Takes the user to another page to encrypt/decrypt an image.
+                        Similarly to regular text encryption, one needs some key or password to encrypt/decrypt an image.
+                        A new feature that's still be worked upon.
+                    </span>
                 </div>
+                <!-- <div>
+                    <input type="file" id="file-input">
+                </div> -->
             </div>
         </div>
 
@@ -39,7 +50,8 @@
                     A key phrase or password required for encryption and decryption.
                     Will take any characters including letters, numbers, and special characters. 
                     Make sure to enter the same key as you used to encrypt/decrypt in order to decrypt
-                    or encrypt the message respecitvely.
+                    or encrypt the message respecitvely. Having a personal key will be necessary in order
+                    to encrypt/decrypt. Encryption and decryption are very fast and responsive.
                 </span>
             </label>
             <div>
@@ -69,6 +81,16 @@
             <div class="textarea-output-container">
                 <textarea id="outputText" name="textarea-output" rows="15" cols="100"></textarea>
             </div>
+        </div>
+
+        <div class="FAQ">
+            <button id="FAQ-button">FAQ</button>
+
+            <script type="text/javascript">
+                document.getElementById("FAQ-button").onclick = function () {
+                    location.href = "FAQ.html";
+                };
+            </script>
         </div>
 
     </body>

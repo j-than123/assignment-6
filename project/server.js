@@ -23,10 +23,31 @@ fs.readFile("./style.css", "utf8", function (err, data) {
     }
 })
 
-var image1;
-fs.readFile("../images/1.jpg", function (err, data) {
+// var image1;
+// fs.readFile("../images/1.jpg", function (err, data) {
+//     if(!err) {
+//         image1 = data;
+//     }
+// })
+
+var microserviceHTML;
+fs.readFile("./microservice.html", "utf8", function (err, data) {
     if(!err) {
-        image1 = data;
+        microserviceHTML = data;
+    }
+})
+
+var microserviceJS;
+fs.readFile("./microservice.js", "utf8", function (err, data) {
+    if(!err) {
+        microserviceJS = data;
+    }
+})
+
+var image;
+fs.readFile("../images/1.jpg", "utf8", function (err, data) {
+    if(!err) {
+        microserviceJS = data;
     }
 })
 
@@ -63,9 +84,19 @@ var app = http.createServer(function (req, res) {
     }
 
     else if(req.url == "/microservice.html") {
-        type = "image/jpeg"
-        data = image1
+        type = "text/html"
+        data = microserviceHTML
     }
+
+    else if(req.url == "/microservice.js") {
+        type = "application/javascript"
+        data = microserviceJS
+    }
+
+    // else if(req.url == "/200/300") {
+    //     type = "image/png"
+    //     data = "http://placekitten.com/200/300"
+    // }
 
     // console.log(type)
     // console.log(data)

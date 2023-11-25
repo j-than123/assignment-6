@@ -5,8 +5,7 @@ var outputText = document.getElementById("outputText")
 var encryptButton = document.getElementById("encrypt-button")
 var decryptButton = document.getElementById("decrypt-button")
 var switchButton = document.getElementById("switch-button")
-
-// const fs = require("fs")
+// var tooltips = document.getElementsByClassName("tooltip")
 
 function onClickEncryption(event) {
     const encrypted = CryptoJS.AES.encrypt(inputText.value, key.value) 
@@ -21,28 +20,45 @@ function onClickDecryption(event) {
 }
 
 function switchOutputInputFields(event) {
-    // let temp = inputText.value 
     inputText.value = outputText.value
     outputText.value = ""
 }
 
+
+
 encryptButton.addEventListener("click", function () {
     if(inputText.value && key.value) {
-        // writeToEncryptFile(inputText.value)
-        // writeToKeyFile(key.value)
         onClickEncryption()
     }
-    
+
+    else {
+        alert("Please provide some input and a key value")
+    }
 })
     
 decryptButton.addEventListener("click", function () {
     if(inputText.value && key.value) {
         onClickDecryption()
     }
+
+    else {
+        alert("Please provide some input and a key value")
+    }    
 })
 
 switchButton.addEventListener("click", function () {
-    if(inputText.value && outputText.value) {
+    if(outputText.value) {
         switchOutputInputFields()
     }
+
+    else {
+        alert("Output field is empty")
+    }
 })
+
+// tooltips.addEventListener("click", function () {
+//     for (var i = 0; i < tooltips.length; i++) {
+//         console.log(tooltips[i].firstElementChild)
+//         tooltips[i].classList.toggle("tooltiptext")
+//     }
+// })

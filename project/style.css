@@ -19,26 +19,16 @@
     overflow: hidden;
 } */
   
-#image, #canvas {
-    border: 4px solid black;
-    border-radius: 2px;
-    /* box-shadow: 0 0 32px 0 rgba(0, 0, 0, .25); */
-    width: 150px;
-    box-sizing: border-box;
-    display: block;
-    background: cyan;
-}
-
-#canvas {
-    margin-left: 32px;
-}
-
 .input {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-/* 
+
+.head {
+    font-size: small
+}
+
 .tooltip {
     position: relative;
     display: inline-block;
@@ -61,6 +51,11 @@
     left: 110%;
 
 }  
+
+.tooltip:hover {
+    cursor: pointer;
+}
+
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
@@ -72,7 +67,7 @@
 
 .textarea-input-container{
    margin-right: 25px;
-} */
+}
 
 .encryption-decryption {
     margin-top: 15px;
@@ -88,4 +83,10 @@
 
 #encrypt-button, #decrypt-button{
     margin-right: 10px;
+}
+
+#FAQ-button {
+    position: absolute;
+    bottom: 30px;
+    right: 30px
 }

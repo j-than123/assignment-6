@@ -1,20 +1,20 @@
 var encryptButton = document.getElementById("encrypt-button")
 var decryptButton = document.getElementById("decrypt-button")
 var key = document.getElementById("key")
+const image = document.getElementById('image')
 
-const image = document.getElementById('image');
 function toDataURL(url, callback) {
-    var xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest()
     xhr.onload = function() {
-        var reader = new FileReader();
+        var reader = new FileReader()
         reader.onloadend = function() {
-            callback(reader.result);
+            callback(reader.result)
         }
-        reader.readAsDataURL(xhr.response);
+        reader.readAsDataURL(xhr.response)
     };
-    xhr.open('GET', url);
-    xhr.responseType = 'blob';
-    xhr.send();
+    xhr.open('GET', url)
+    xhr.responseType = 'blob'
+    xhr.send()
 }
   
 var ogImage;
